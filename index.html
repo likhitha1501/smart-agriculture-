@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Agriculture Monitoring System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h1>🌱 Smart Agriculture</h1>
+        <p>IoT & Cloud Based Monitoring System</p>
+    </div>
+
+    <div class="cloud-status">
+        <span class="dot"></span>
+        Cloud Connected
+    </div>
+</header>
+
+
+<main>
+
+    <!-- SENSOR CARDS -->
+    <section class="cards">
+
+        <div class="card">
+            <div class="icon">🌡️</div>
+            <div>
+                <h3>Temperature</h3>
+                <h2 id="temperature">28 °C</h2>
+                <p id="tempStatus">Normal</p>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">💧</div>
+            <div>
+                <h3>Humidity</h3>
+                <h2 id="humidity">65 %</h2>
+                <p id="humidityStatus">Normal</p>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">🌱</div>
+            <div>
+                <h3>Soil Moisture</h3>
+                <h2 id="soil">42 %</h2>
+                <p id="soilStatus">Moist</p>
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">🌧️</div>
+            <div>
+                <h3>Rainfall</h3>
+                <h2 id="rainfall">No Rain</h2>
+                <p>Current Status</p>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- SENSOR MONITORING -->
+    <section class="monitor">
+
+        <div class="section-title">
+            <div>
+                <h2>📊 Sensor Monitoring</h2>
+                <p>Real-time agricultural sensor readings</p>
+            </div>
+
+            <span id="lastUpdate">Updated just now</span>
+        </div>
+
+        <canvas id="sensorChart"></canvas>
+
+    </section>
+
+
+    <!-- IRRIGATION -->
+    <section class="irrigation">
+
+        <h2>💦 Irrigation System</h2>
+
+        <div class="irrigation-data">
+
+            <div>
+                <p>Soil Condition</p>
+                <h2 id="irrigationSoil">MOIST</h2>
+            </div>
+
+            <div>
+                <p>Water Pump</p>
+                <h2 id="pump">OFF</h2>
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- IMPORTANT: JavaScript file -->
+<script src="script.js"></script>
+
+</body>
+</html>

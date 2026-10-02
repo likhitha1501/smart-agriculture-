@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f1f5f2;
+    color: #1f2937;
+}
+
+
+/* HEADER */
+
+header {
+    background: linear-gradient(135deg, #0f5132, #198754);
+    color: white;
+    padding: 25px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+.cloud-status {
+    font-size: 15px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #42e695;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+
+/* MAIN */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.icon {
+    font-size: 38px;
+}
+
+.card h3 {
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.card h2 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.card p {
+    color: #198754;
+}
+
+
+/* SENSOR MONITORING */
+
+.monitor {
+    background: white;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    font-size: 25px;
+}
+
+.section-title p {
+    color: #777;
+    margin-top: 5px;
+}
+
+#lastUpdate {
+    color: #777;
+    font-size: 13px;
+}
+
+#sensorChart {
+    width: 100% !important;
+    height: 350px !important;
+}
+
+
+/* IRRIGATION */
+
+.irrigation {
+    background: white;
+    margin-top: 30px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.irrigation h2 {
+    margin-bottom: 20px;
+}
+
+.irrigation-data {
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+}
+
+.irrigation-data p {
+    color: #777;
+    margin-bottom: 8px;
+}
+
+#irrigationSoil {
+    color: #198754;
+}
+
+#pump {
+    color: #dc3545;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .irrigation-data {
+        gap: 50px;
+    }
+}
